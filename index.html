@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+
+    <header class="hero">
+      <p class="eyebrow">Student Workspace</p>
+      <h1>Study Planner</h1>
+      <p class="hero-sub">Keep track of your study tasks and assignments</p>
+    </header>
+
+    <!-- Add task form -->
+    <section class="card">
+      <h2>Add a new task</h2>
+      <form id="task-form" novalidate>
+        <label for="task-title">Task title</label>
+        <input type="text" id="task-title" placeholder="e.g. Finish Chapter 3 notes" maxlength="100">
+        <p id="title-error" class="error hidden">Please enter a task title</p>
+
+        <div class="row">
+          <div class="field">
+            <label for="task-subject">Subject / Course</label>
+            <input type="text" id="task-subject" placeholder="e.g. Mathematics" maxlength="50">
+          </div>
+          <div class="field">
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">+ Add Task</button>
+      </form>
+    </section>
+
+    <!-- Task list -->
+    <section>
+      <div class="list-header">
+        <div>
+          <h2>My Tasks</h2>
+          <p id="task-summary" class="subtitle"></p>
+        </div>
+        <span id="remaining-badge" class="badge"></span>
+      </div>
+
+      <div id="progress-wrap" class="progress-wrap hidden">
+        <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+        <span id="progress-text" class="progress-text"></span>
+      </div>
+
+      <div class="filters" id="filters">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="active">Active</button>
+        <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="task-list"></ul>
+
+      <div id="empty-state" class="empty hidden">
+        <div class="empty-icon">📚</div>
+        <p id="empty-title" class="empty-title">No tasks yet</p>
+        <p id="empty-text" class="subtitle">Add your first study task above!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
