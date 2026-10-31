@@ -6,6 +6,7 @@ Built as an individual mini project for the **ATU Virtual Internship (Software D
 **Live application:** https://mosesdjabason.github.io/study-planner/
 
 **Author:** Moses Djabason
+**Index number:** 01254338B
 
 ## Problem Statement
 
@@ -75,4 +76,4 @@ No installation or server is needed.
 - AI assistance (Claude by Anthropic) was used for guidance and code support while building this project. I reviewed the code and understand how it works.
 
 ## Author
-Moses Djabason, ATU Virtual Internship
+Moses Djabason(Index number: 01254338B), ATU Virtual Internship
